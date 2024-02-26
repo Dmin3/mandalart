@@ -1,0 +1,44 @@
+.main-container {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 4rem;
+}
+
+.grid-item {
+  background-color: #f0f0f0; /* 배경색 */
+  border: 1px solid #ccc; /* 테두리 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: auto;
+  width: 80px;
+  height: 80px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+  justify-items: center;
+  margin: auto;
+  width: 50vw;
+  justify-content: center;
+  align-content: center;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .highlight {
+    grid-column: auto; /* 강조 셀도 1열로 */
+  }
+}
