@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+// 설정해줘야지 경고창 뜨지 않음
+mongoose.set("strictQuery", false);
+
 // MongoDB 연결
 const mongodbConnection = async () => {
   mongoose
