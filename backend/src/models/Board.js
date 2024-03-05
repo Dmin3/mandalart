@@ -4,7 +4,7 @@ function vaildArr(arr) {
   return arr.length <= 9;
 }
 
-const message = { message: "배열은 9이상 될 수 없습니다." };
+const message = { message: "크기 9 이상 불가" };
 
 // 자식 Board 스키마 정의
 const childBoardSchema = new mongoose.Schema({
