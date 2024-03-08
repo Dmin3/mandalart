@@ -1,6 +1,7 @@
 const Board = require("../models/Board");
 
 const EMPTY_ARR = new Array(9).fill(null);
+const CHILDRENS = Array.from({ length: 8 }, () => EMPTY_ARR);
 
 class BoardService {
   constructor() {}
@@ -11,8 +12,9 @@ class BoardService {
     return datas;
   }
 
-  async createBoard(boardDto) {
-    const board = new Board(boardDto);
+  async createBoard(body) {
+    const { main, children } = body;
+    const board = new Board({ main: main, children: children });
     await board.save();
 
     return board;
